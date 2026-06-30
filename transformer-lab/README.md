@@ -43,11 +43,35 @@ Run the example:
 uv run --python "$TORCH_RESEARCH_PY" --no-project python examples/basic_usage.py
 ```
 
+Run the step-by-step lab:
+
+```bash
+uv run --python "$TORCH_RESEARCH_PY" --no-project python examples/positional_lab.py
+```
+
+Open the notebook version:
+
+```bash
+jupyter notebook notebooks/positional_embeddings_lab.ipynb
+```
+
+Open the PyTorch warm-up lab:
+
+```bash
+jupyter notebook notebooks/pytorch_shapes_attention_lab.ipynb
+```
+
 Run tests:
 
 ```bash
 uv run --python "$TORCH_RESEARCH_PY" --no-project python -m pytest
 ```
+
+## Labs
+
+- [PyTorch shapes, dot products, and mini-attention](notebooks/pytorch_shapes_attention_lab.ipynb)
+- [Исследование positional embeddings](docs/lab-positional-embeddings.md)
+- [Notebook: positional embeddings lab](notebooks/positional_embeddings_lab.ipynb)
 
 ## Project Layout
 
@@ -56,6 +80,12 @@ src/transformer_lab/
   positional.py      # sinusoidal PE module and relative shift helper
 examples/
   basic_usage.py     # tiny runnable demo
+  positional_lab.py  # step-by-step numerical lab
+docs/
+  lab-positional-embeddings.md
+notebooks/
+  pytorch_shapes_attention_lab.ipynb
+  positional_embeddings_lab.ipynb
 tests/
   test_positional.py # formula, shape, and relative-shift tests
 ```
